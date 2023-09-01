@@ -1,10 +1,13 @@
-function App() {
+import {Routes, Route} from 'react-router-dom'
+import Login from './components/pages/login/Login'
+import Home from './components/pages/home/Home'
 
-  // TODO: install styledComponents
+function App() {
   return (
-    <>
-      Hello world!
-    </>
+    <Routes>
+      <Route path="/" element={<Home />} />
+      <Route path="/login" element={<Login />} />
+    </Routes>
   )
 }
 
