@@ -19,7 +19,7 @@ export const ButtonWrapper = styled.div`
   align-items: center;
   justify-content: center;
   width: 50%;
-  height: 90%;
+  height: 100%;
   border-bottom: 1px solid transparent;
   transition: all 0.5s ease-in-out;
 
