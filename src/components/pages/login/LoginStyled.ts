@@ -19,9 +19,11 @@ export const ButtonWrapper = styled.div`
   align-items: center;
   justify-content: center;
   width: 50%;
-  height: 100%;
+  height: 90%;
+  border-bottom: 1px solid transparent;
+  transition: all 0.5s ease-in-out;
 
-  font-family: 'Roboto';
-
-  border-bottom: 1px solid #ffffff;
+  &:hover {
+    border-bottom: 1px solid #ffffff;
+  }
 `
