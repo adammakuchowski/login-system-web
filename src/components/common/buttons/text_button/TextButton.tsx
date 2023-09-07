@@ -15,7 +15,10 @@ const TextButton = ({
 
   return (
     <>
-      <TextButtonContainer onClick={onButtonAction} style={overrideStyle}>
+      <TextButtonContainer 
+        onClick={onButtonAction} 
+        style={overrideStyle}
+        >
         {text}
       </TextButtonContainer>
     </>
