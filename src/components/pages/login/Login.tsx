@@ -10,9 +10,9 @@ const Login = (): JSX.Element => {
   const [isSignInButtonActive, setIsSignInButtonActive] = useState<boolean>()
   const [isRegisterButtonActive, setIsRegisterButtonActive] = useState<boolean>()
 
-  const onButtonClick = (a: boolean, b: boolean) => {
-    setIsSignInButtonActive(a)
-    setIsRegisterButtonActive(b)
+  const onButtonClick = (signInActive: boolean, registerActive: boolean) => {
+    setIsSignInButtonActive(signInActive)
+    setIsRegisterButtonActive(registerActive)
   }
 
   return (
