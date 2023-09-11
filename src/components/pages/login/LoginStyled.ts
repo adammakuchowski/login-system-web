@@ -14,14 +14,23 @@ export const LoginModeWrapper = styled.div`
   justify-content: center;
 `
 
-export const ButtonWrapper = styled.div`
+interface ButtonWrapperProps {
+  stayActive?: any;
+}
+
+export const ButtonWrapper = styled.div<ButtonWrapperProps>`
   display: flex;
   align-items: center;
   justify-content: center;
   width: 50%;
   height: 100%;
-  border-bottom: 1px solid transparent;
   transition: all 0.5s ease-in-out;
+
+  border-bottom: ${({stayActive}: ButtonWrapperProps) => (
+    stayActive ?
+      '1px solid #ffffff' :
+      '1px solid transparent'
+  )};
 
   &:hover {
     border-bottom: 1px solid #ffffff;
