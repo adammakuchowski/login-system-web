@@ -4,6 +4,11 @@ export const LoginContainer = styled.div`
   border: 1px solid #ffffff;
   width: 35%;
   height: 50%;
+
+  display: flex;
+  flex-direction:column;
+
+  /* overflow: hidden; */
 `
 
 export const LoginModeWrapper = styled.div`
@@ -18,7 +23,7 @@ interface ButtonWrapperProps {
   stayActive?: any;
 }
 
-export const ButtonWrapper = styled.div<ButtonWrapperProps>`
+export const ButtonModeWrapper = styled.div<ButtonWrapperProps>`
   display: flex;
   align-items: center;
   justify-content: center;
@@ -36,3 +41,57 @@ export const ButtonWrapper = styled.div<ButtonWrapperProps>`
     border-bottom: 1px solid #ffffff;
   }
 `
+
+export const LoginContentContainer = styled.div`
+  width: 200%;
+  flex: 1;
+  display: flex;
+  transition: all 1s ease-in-out;
+
+  &.signIn{
+    transform: translateX(0);
+  }
+
+  &.register{
+    transform: translateX(-50%);
+  }
+`
+
+export const SignInContainer = styled.div`
+  width: 50%;
+  height: 100%;
+  background-color: green;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+`
+
+export const RegisterContainer = styled.div`
+  width: 50%;
+  height: 100%;
+  background-color: blue;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+`
+
+export const TextFieldWrapper = styled.div`
+  background-color: red;
+
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+  gap: 30px;
+`
+
+export const ButtonActionWrapper = styled.div`
+
+`
+
