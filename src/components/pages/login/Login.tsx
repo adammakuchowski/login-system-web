@@ -39,7 +39,8 @@ const Login = (): JSX.Element => {
             <TextField
               id="email-input"
               label="Email"
-              variant="standard"
+              variant='standard'
+              type='email'
               fullWidth
               required
             />
