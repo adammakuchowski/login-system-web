@@ -1,14 +1,35 @@
 import styled from 'styled-components'
 
 export const LoginContainer = styled.div`
-  border: 1px solid #ffffff;
-  width: 35%;
-  height: 50%;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  overflow: hidden;
+  /* background-color: blue; */
+`
 
+export const LoginBanner = styled.div`
+  width: 70%;
+  height: 100%;
+  background-color: #333333;
+`
+
+export const LoginFormWrapprt = styled.div`
+  width: 30%;
+  height: 100%;
+  background-color: #666666;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding-left: 80px;
+`
+
+export const LoginForm = styled.div`
+  width: 70%;
+  height: 50%;
   display: flex;
   flex-direction:column;
-
-  /* overflow: hidden; */
+  overflow: hidden;
 `
 
 export const LoginModeWrapper = styled.div`
@@ -57,41 +78,30 @@ export const LoginContentContainer = styled.div`
   }
 `
 
-export const SignInContainer = styled.div`
-  width: 50%;
+export const BannerWrapper = styled.div`
   height: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
+  /* background-color: red; */
+  margin-left: 150px;
 `
 
-export const RegisterContainer = styled.div`
-  width: 50%;
-  height: 100%;
-  background-color: blue;
+export const CompanyNameWrapper = styled.div`
+  height: 15%;
   display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
+  align-items: end;
+  justify-content: flex-start;
+  /* background-color: blue; */
 `
 
-export const TextFieldWrapper = styled.div`
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-  flex-direction: column;
-  width: 100%;
-  height: 55%;
-  gap: 30px;
+export const DescriptionWrapper = styled.div`
+  
 `
 
-export const ButtonActionWrapper = styled.div`
-  width: 100%;
-  height: 45%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
+export const ReferencesWrapper = styled.div`
+  
 `
 
+export const CompanyName = styled.h1`
+  font-family: 'Roboto Mono', monospace;
+  display: flex;
+  /* background-color: gold; */
+`

@@ -8,9 +8,9 @@ interface LayoutProps {
 
 const Layout = ({children}: LayoutProps): JSX.Element => (
   <LayoutContainer>
-    <Header />
+    {/* <Header /> */}
     {children}
-    <Footer />
+    {/* <Footer /> */}
   </LayoutContainer>
 )
 
