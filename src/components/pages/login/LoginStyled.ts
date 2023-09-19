@@ -92,16 +92,10 @@ export const CompanyNameWrapper = styled.div`
   /* background-color: blue; */
 `
 
-export const DescriptionWrapper = styled.div`
+export const MainDescriptionWrapper = styled.div`
   
 `
 
 export const ReferencesWrapper = styled.div`
   
-`
-
-export const CompanyName = styled.h1`
-  font-family: 'Roboto Mono', monospace;
-  display: flex;
-  /* background-color: gold; */
 `
