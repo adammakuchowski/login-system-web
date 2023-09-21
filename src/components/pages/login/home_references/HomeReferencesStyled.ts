@@ -1,5 +1,5 @@
 import styled from 'styled-components'
 
-export const DescriptionContainer = styled.div`
+export const ReferencesContainer = styled.div`
   font-family: 'Roboto Mono', monospace;
 `

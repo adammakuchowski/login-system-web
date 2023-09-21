@@ -80,8 +80,12 @@ export const LoginContentContainer = styled.div`
 
 export const BannerWrapper = styled.div`
   height: 100%;
-  /* background-color: red; */
+  background-color: red;
   margin-left: 150px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 `
 
 export const CompanyNameWrapper = styled.div`
@@ -89,13 +93,15 @@ export const CompanyNameWrapper = styled.div`
   display: flex;
   align-items: end;
   justify-content: flex-start;
-  /* background-color: blue; */
+  background-color: blue;
 `
 
 export const MainDescriptionWrapper = styled.div`
-  
+  height: 50%;
+  background-color: green;
 `
 
 export const ReferencesWrapper = styled.div`
-  
+  height: 10%;
+  background-color: pink;
 `

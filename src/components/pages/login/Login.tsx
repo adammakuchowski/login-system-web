@@ -14,9 +14,10 @@ import {
 } from './LoginStyled'
 import SignIn from './sign_in/SignIn'
 import Register from './register/Register'
-import TextButton from '../../common/buttons/text_button/TextButton'
 import CompanyName from './company_name/CompanyName'
 import MainDescription from './main_description/MainDescription'
+import TextButton from '../../common/buttons/text_button/TextButton'
+import HomeReferences from './home_references/HomeReferences'
 
 const Login = (): JSX.Element => {
   const [isSignInButtonActive, setIsSignInButtonActive] = useState<boolean>(true)
@@ -38,7 +39,7 @@ const Login = (): JSX.Element => {
             <MainDescription />
           </MainDescriptionWrapper>
           <ReferencesWrapper>
-            {/* TODO */}
+            <HomeReferences />
           </ReferencesWrapper>
         </BannerWrapper>
       </LoginBanner>

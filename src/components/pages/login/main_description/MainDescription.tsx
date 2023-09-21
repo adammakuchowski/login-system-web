@@ -1,6 +1,10 @@
+import {DescriptionContainer} from './MainDescriptionStyled'
+
 const MainDescription = () => {
   return (
-    <div>MainDescription</div>
+    <DescriptionContainer>
+      MainDescription
+    </DescriptionContainer>
   )
 }
 
