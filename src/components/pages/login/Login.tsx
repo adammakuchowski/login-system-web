@@ -9,13 +9,14 @@ import {
   LoginFormWrapprt,
   BannerWrapper,
   CompanyNameWrapper,
-  DescriptionWrapper,
+  MainDescriptionWrapper,
   ReferencesWrapper,
-  CompanyName,
 } from './LoginStyled'
 import SignIn from './sign_in/SignIn'
 import Register from './register/Register'
 import TextButton from '../../common/buttons/text_button/TextButton'
+import CompanyName from './company_name/CompanyName'
+import MainDescription from './main_description/MainDescription'
 
 const Login = (): JSX.Element => {
   const [isSignInButtonActive, setIsSignInButtonActive] = useState<boolean>(true)
@@ -31,15 +32,14 @@ const Login = (): JSX.Element => {
       <LoginBanner>
         <BannerWrapper>
           <CompanyNameWrapper>
-            <CompanyName>
-              S
-              <span style={{color: '#FFA500', fontFamily: 'Kalam'}}>O</span>
-              CIAL
-              <span style={{color: '#808080', fontFamily: 'Kalam'}}>TRENSD</span>
-            </CompanyName>
+            <CompanyName />
           </CompanyNameWrapper>
-          <DescriptionWrapper></DescriptionWrapper>
-          <ReferencesWrapper></ReferencesWrapper>
+          <MainDescriptionWrapper>
+            <MainDescription />
+          </MainDescriptionWrapper>
+          <ReferencesWrapper>
+            {/* TODO */}
+          </ReferencesWrapper>
         </BannerWrapper>
       </LoginBanner>
       <LoginFormWrapprt>
