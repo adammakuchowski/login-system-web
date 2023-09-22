@@ -5,7 +5,6 @@ export const LoginContainer = styled.div`
   height: 100%;
   display: flex;
   overflow: hidden;
-  /* background-color: blue; */
 `
 
 export const LoginBanner = styled.div`
@@ -22,6 +21,9 @@ export const LoginFormWrapprt = styled.div`
   align-items: center;
   justify-content: flex-start;
   padding-left: 80px;
+
+  background: rgb(51,51,51);
+  background: linear-gradient(90deg, rgba(51,51,51,1) 0%, rgba(102,102,102,1) 100%);
 `
 
 export const LoginForm = styled.div`
@@ -80,7 +82,6 @@ export const LoginContentContainer = styled.div`
 
 export const BannerWrapper = styled.div`
   height: 100%;
-  background-color: red;
   margin-left: 150px;
 
   display: flex;
@@ -93,15 +94,14 @@ export const CompanyNameWrapper = styled.div`
   display: flex;
   align-items: end;
   justify-content: flex-start;
-  background-color: blue;
 `
 
 export const MainDescriptionWrapper = styled.div`
   height: 50%;
-  background-color: green;
+  display: flex;
+  align-items: center;
 `
 
 export const ReferencesWrapper = styled.div`
   height: 10%;
-  background-color: pink;
 `
