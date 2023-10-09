@@ -46,12 +46,7 @@ export const userSlice = createSlice({
       })
       .addCase(loginUser.fulfilled, (state, action) => {
         state.loginUserStatus = 'succeeded'
-
-        console.log('action.payload', action.payload)
-
-        state.token = action.payload
-
-
+        sessionStorage.setItem('token', action.payload.token)
       })
       .addCase(loginUser.rejected, (state, action) => {
         state.loginUserStatus = 'failed'
