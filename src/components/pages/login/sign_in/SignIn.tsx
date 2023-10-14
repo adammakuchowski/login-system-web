@@ -1,4 +1,4 @@
-import {useState} from 'react'
+import {useEffect, useState} from 'react'
 import {useDispatch, useSelector} from 'react-redux'
 
 import TextField from '@mui/material/TextField/TextField'
@@ -13,10 +13,18 @@ import {
   getLoginUserStatus,
   loginUser,
 } from '../../../../features/user/userSlice'
+import {useNavigate} from 'react-router-dom'
 
 const SignIn = () => {
   const dispatch = useDispatch()
+  const navigate = useNavigate()
   const loginUserStatus = useSelector(getLoginUserStatus)
+
+  useEffect(()=> {
+    if(loginUserStatus !== 'succeeded') return
+
+    navigate('/')
+  }, [loginUserStatus])
 
   const [email, setEmail] = useState<string>('')
   const [password, setPassword] = useState<string>('')
