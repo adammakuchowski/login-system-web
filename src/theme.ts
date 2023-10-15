@@ -44,7 +44,17 @@ const theme = createTheme({
           fontFamily: 'Roboto Mono',
         },
       },
-    }
+    },
+    MuiLinearProgress: {
+      styleOverrides: {
+        root: {
+          backgroundColor: '#111111',
+        },
+        bar: {
+          backgroundColor: '#555555',
+        },
+      },
+    },
   },
 })
 

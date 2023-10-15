@@ -1,23 +1,15 @@
 import axios, {Canceler} from 'axios'
 
-import {createAsyncThunk, createSlice} from '@reduxjs/toolkit'
+import {
+  createAsyncThunk,
+  createSlice,
+} from '@reduxjs/toolkit'
 
 import {AppState} from '../../app/store'
-
-export interface UserState {
-  loginUserStatus: 'idle' | 'loading' | 'succeeded' | 'failed';
-  loginUserError?: string;
-  token?: string;
-}
-
-const initialState: UserState = {
-  loginUserStatus: 'idle',
-}
-
-interface LoginUserData {
-  email: string;
-  password: string;
-}
+import {
+  LoginUserData,
+  UserState,
+} from './types'
 
 export const loginUser = createAsyncThunk('auth/login', async (loginUserData: LoginUserData) => {
   try {
@@ -35,7 +27,32 @@ export const loginUser = createAsyncThunk('auth/login', async (loginUserData: Lo
   }
 })
 
-export const userSlice = createSlice({
+export const verifyToken = createAsyncThunk('auth/verify', async (token: string) => {
+  try {
+    let cancel: Canceler
+    const response = await axios.get(
+      'http://localhost:1337/auth/verify',
+      {
+        headers: {
+          'Authorization': `Bearer ${token}`,
+        },
+        cancelToken: new axios.CancelToken(c => cancel = c),
+      }
+    )
+
+    return response.status
+  } catch (error: any) {
+    console.error('[verifyToken]:', error.message)
+    throw error
+  }
+})
+
+const initialState: UserState = {
+  loginUserStatus: 'idle',
+  verifyTokenStatus: 'idle',
+}
+
+const userSlice = createSlice({
   name: 'user',
   initialState,
   reducers: {},
@@ -52,9 +69,20 @@ export const userSlice = createSlice({
         state.loginUserStatus = 'failed'
         state.loginUserError = action.error.message
       })
+      .addCase(verifyToken.pending, (state) => {
+        state.verifyTokenStatus = 'loading'
+      })
+      .addCase(verifyToken.fulfilled, (state) => {
+        state.verifyTokenStatus = 'succeeded'
+      })
+      .addCase(verifyToken.rejected, (state, action) => {
+        state.verifyTokenStatus = 'failed'
+        state.verifyTokenError = action.error.message
+      })
   }
 })
 
 export const getLoginUserStatus = (state: AppState) => state.user.loginUserStatus
+export const getVerifyTokenStatus = (state: AppState) => state.user.verifyTokenStatus
 
 export default userSlice.reducer
