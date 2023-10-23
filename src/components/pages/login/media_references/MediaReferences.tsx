@@ -7,14 +7,14 @@ import PinterestIcon from '@mui/icons-material/Pinterest'
 import {
   ReferencesContainer,
   SocialMediaIconWrapper,
-} from './HomeReferencesStyled'
+} from './MediaReferencesStyled'
 
 interface SocialMediaIcon {
   iconComponent: JSX.Element;
   iconAddress: string;
 }
 
-const HomeReferences = () => {
+const MediaReferences = () => {
   const openPage = (address: string) => window.open(address)
 
   const socialMedias: SocialMediaIcon[] = [
@@ -51,4 +51,4 @@ const HomeReferences = () => {
   )
 }
 
-export default HomeReferences
+export default MediaReferences
