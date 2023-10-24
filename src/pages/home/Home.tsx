@@ -5,8 +5,8 @@ import {useNavigate} from 'react-router-dom'
 import {
   getVerifyTokenStatus,
   verifyToken,
-} from '../../../features/user/userSlice'
-import LoadingLine from '../../common/buttons/loading_line/LoadingLine'
+} from '../../features/user/userSlice'
+import LoadingLine from '../../components/common/buttons/loading_line/LoadingLine'
 import {
   HomeContainer,
   LoadingLineContainer,

@@ -1,7 +1,8 @@
 import styled from 'styled-components'
 
 export const TextButtonContainer = styled.button`
-  font-family: 'Roboto Mono', monospace;
+  /* font-family: 'Roboto Mono', monospace; */
+  font-family: 'Roboto';
   color: #cdcdcd;
   border: none;
   padding: 0;
