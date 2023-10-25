@@ -3,8 +3,8 @@ import {Provider} from 'react-redux'
 
 import ThemeProvider from '@mui/material/styles/ThemeProvider'
 
-import Login from './components/pages/login/Login'
-import Home from './components/pages/home/Home'
+import Home from './pages/home/Home'
+import Login from './pages/login/Login'
 import Layout from './components/shared/layout/Layout'
 import theme from './theme'
 import store from './app/store'

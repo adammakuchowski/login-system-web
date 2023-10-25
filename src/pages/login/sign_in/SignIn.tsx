@@ -12,7 +12,7 @@ import {
 import {
   getLoginUserStatus,
   loginUser,
-} from '../../../../features/user/userSlice'
+} from '../../../features/user/userSlice'
 import {useNavigate} from 'react-router-dom'
 
 const SignIn = () => {

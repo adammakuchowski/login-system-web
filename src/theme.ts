@@ -14,7 +14,7 @@ const theme = createTheme({
       styleOverrides: {
         root: {
           color: '#FFFFFF',
-          fontFamily: 'Roboto Mono',
+          fontFamily: 'Roboto',
         },
       },
     },
@@ -34,14 +34,14 @@ const theme = createTheme({
       styleOverrides: {
         input: {
           color: '#FFFFFF',
-          fontFamily: 'Roboto Mono',
+          fontFamily: 'Roboto',
         },
       },
     },
     MuiButton: {
       styleOverrides: {
         root: {
-          fontFamily: 'Roboto Mono',
+          fontFamily: 'Roboto',
         },
       },
     },
