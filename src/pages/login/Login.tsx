@@ -4,9 +4,9 @@ import {
   LoginFormWrapprt,
   LogoContainer,
   LogoImgWrapper,
-  CompanyNameWrapper,
   MediaReferencesWrapper,
 } from './LoginStyled'
+import CompanyName from './company_name/CompanyName'
 import LoginForm from './login_form/LoginForm'
 import MediaReferences from './media_references/MediaReferences'
 
@@ -14,9 +14,7 @@ const Login = (): JSX.Element => {
   return (
     <LoginContainer>
       <LoginFormWrapprt>
-        <CompanyNameWrapper>
-          Football FX
-        </CompanyNameWrapper>
+        <CompanyName/>
         <LoginForm />
         <MediaReferencesWrapper>
           <MediaReferences />
