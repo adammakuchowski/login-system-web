@@ -6,7 +6,7 @@ import {
   getVerifyTokenStatus,
   verifyToken,
 } from '../../features/user/userSlice'
-import LoadingLine from '../../components/common/buttons/loading_line/LoadingLine'
+import LoadingLine from '../../components/common/loading_line/LoadingLine'
 import {
   HomeContainer,
   LoadingLineContainer,

@@ -1,8 +1,9 @@
 import styled from 'styled-components'
 
 export const LoginFormContainer = styled.div`
-  width: 70%;
+  width: 60%;
   height: 60%;
+  /* gap: 50px; */
   display: flex;
   flex-direction: column;
   align-items: flex-start;

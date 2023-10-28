@@ -1,27 +1,22 @@
-import {TextButtonContainer} from './TextButtonStyled'
+import {TextButtonContainer, TextWrapper} from './TextButtonStyled'
 
 interface TextButtonProps {
   text: string;
-  buttonAction?: () => void;
+  action?: () => void;
   overrideStyle?: object;
 }
 
 const TextButton = ({
   text,
-  buttonAction,
+  action,
   overrideStyle,
 }: TextButtonProps): JSX.Element => {
-  const onButtonAction = () => buttonAction && buttonAction()
+  const onAction = () => action && action()
 
   return (
-    <>
-      <TextButtonContainer 
-        onClick={onButtonAction} 
-        style={overrideStyle}
-        >
-        {text}
-      </TextButtonContainer>
-    </>
+    <TextButtonContainer onClick={onAction} style={overrideStyle}>
+      <TextWrapper>{text}</TextWrapper>
+    </TextButtonContainer>
   )
 }
 

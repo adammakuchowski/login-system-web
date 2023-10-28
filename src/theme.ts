@@ -3,17 +3,17 @@ import createTheme from '@mui/material/styles/createTheme'
 const theme = createTheme({
   palette: {
     primary: {
-      main: '#FFFFFF',
+      main: '#151515',
     },
     text: {
-      primary: '#FFFFFF',
+      primary: '#151515',
     },
   },
   components: {
     MuiInputLabel: {
       styleOverrides: {
         root: {
-          color: '#FFFFFF',
+          color: '#151515',
           fontFamily: 'Roboto',
         },
       },
@@ -22,10 +22,10 @@ const theme = createTheme({
       styleOverrides: {
         root: {
           '& .MuiInput-underline:after': {
-            borderBottomColor: '#FFFFFF',
+            borderBottomColor: '#151515',
           },
           '& .MuiInput-underline:before': {
-            borderBottomColor: '#808080',
+            borderBottomColor: '#151515',
           },
         },
       },
@@ -33,7 +33,7 @@ const theme = createTheme({
     MuiInputBase: {
       styleOverrides: {
         input: {
-          color: '#FFFFFF',
+          color: '#151515',
           fontFamily: 'Roboto',
         },
       },
