@@ -5,6 +5,7 @@ import {
   LogoContainer,
   LogoImgWrapper,
   MediaReferencesWrapper,
+  ButtonWrapper,
 } from './LoginStyled'
 import CompanyName from './company_name/CompanyName'
 import LoginForm from './login_form/LoginForm'
@@ -14,7 +15,7 @@ const Login = (): JSX.Element => {
   return (
     <LoginContainer>
       <LoginFormWrapprt>
-        <CompanyName/>
+        <CompanyName />
         <LoginForm />
         <MediaReferencesWrapper>
           <MediaReferences />
@@ -24,7 +25,11 @@ const Login = (): JSX.Element => {
         <LogoContainer>
           <LogoImgWrapper src='/images/logo.png' alt="test" />
         </LogoContainer>
+        <ButtonWrapper>
+
+        </ButtonWrapper>
       </LoginBanner>
+
     </LoginContainer >
   )
 }

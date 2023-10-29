@@ -13,10 +13,11 @@ export const LoginBanner = styled.div`
   width: 50%;
   height: 100%;
   background-color: #b1b1b1;
-
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-direction: column;
+  position: relative;
 `
 export const LoginFormWrapprt = styled.div`
   width: 50%;
@@ -52,3 +53,12 @@ export const MediaReferencesWrapper = styled.div`
   align-items: center;
   justify-content: center;
 `
+
+export const ButtonWrapper = styled.div`
+  background-color: red;
+  width: 100%;
+  height: 10%;
+  position: absolute;
+  bottom: 0;
+`
+
