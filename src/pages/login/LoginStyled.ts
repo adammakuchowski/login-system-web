@@ -5,18 +5,17 @@ export const LoginContainer = styled.div`
   height: 100%;
   display: flex;
   overflow: hidden;
-
-  background-color: red;
 `
 
 export const LoginBanner = styled.div`
   width: 50%;
   height: 100%;
   background-color: #b1b1b1;
-
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-direction: column;
+  position: relative;
 `
 export const LoginFormWrapprt = styled.div`
   width: 50%;
@@ -51,4 +50,30 @@ export const MediaReferencesWrapper = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
+`
+
+export const FooterLoginBanner = styled.div`
+  width: 100%;
+  height: 10%;
+  position: absolute;
+  bottom: 0;
+
+  background-color: red;
+  display: flex;
+
+  justify-content: flex-end;
+  align-items: center;
+`
+
+export const ButtonWrapper = styled.div`
+  background-color: gold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+  margin-right: 50px;
+`
+
+export const ButtonDescription = styled.p`
+  font-family: 'Roboto';
 `

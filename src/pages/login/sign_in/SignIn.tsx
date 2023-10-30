@@ -68,8 +68,20 @@ const SignIn = () => {
         <TextButton text='Forgot password?' />
       </TextButtonWrapper>
       <ButtonActionWrapper>
-        <Button variant="outlined" onClick={handleLoginUser} style={{fontSize: '16px', padding: '15px 40px'}}>SIGN IN</Button>
-        <Button variant="outlined" onClick={handleLoginUser} style={{fontSize: '16px', padding: '15px 40px'}}>SIGN UP</Button>
+        <Button
+          variant="outlined"
+          onClick={handleLoginUser}
+          style={{fontSize: '16px', padding: '20px 60px'}}
+        >
+          SIGN IN
+        </Button>
+        <Button
+          variant="outlined"
+          onClick={handleLoginUser}
+          style={{fontSize: '16px', padding: '20px 60px'}}
+        >
+          SIGN UP
+        </Button>
       </ButtonActionWrapper>
     </SignInContainer>
   )
