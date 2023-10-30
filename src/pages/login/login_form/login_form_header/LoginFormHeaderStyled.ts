@@ -2,10 +2,10 @@ import styled from 'styled-components'
 
 export const HeaderContainer = styled.div`
   font-family: 'Roboto';
+  margin-bottom: 40px;
 `
 
 export const NameWrapper = styled.h2`
-  background-color: red;
   font-size: 40px;
   font-weight: 400;
   padding: 0;
@@ -14,7 +14,6 @@ export const NameWrapper = styled.h2`
 `
 
 export const DescriptionWrapper = styled.p`
-  background-color: red;
   margin: 0;
   padding: 0;
 `
