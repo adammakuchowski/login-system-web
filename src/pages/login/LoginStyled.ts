@@ -50,6 +50,46 @@ export const MediaReferencesWrapper = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
+
+  margin-right: 40px;
+`
+
+export const FooterLoginForm = styled.div`
+  width: 100%;
+  height: 10%;
+  bottom: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+`
+
+export const BasicInformationContainer = styled.div`
+  margin-left: 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+`
+
+export const InfoAndPolicyWrapper = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+`
+
+export const CopyrightWrapper = styled.div`
+  height: 30px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  color: #acacac;
+`
+
+export const CopyrightTextWrapper = styled.p`
+  margin: 0;
+  padding: 0;
+  font-family: 'Roboto';
+  font-weight: 200;
 `
 
 export const FooterLoginBanner = styled.div`
@@ -57,16 +97,12 @@ export const FooterLoginBanner = styled.div`
   height: 10%;
   position: absolute;
   bottom: 0;
-
-  background-color: red;
   display: flex;
-
   justify-content: flex-end;
   align-items: center;
 `
 
 export const ButtonWrapper = styled.div`
-  background-color: gold;
   display: flex;
   align-items: center;
   justify-content: center;
