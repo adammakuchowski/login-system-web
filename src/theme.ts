@@ -3,62 +3,62 @@ import createTheme from '@mui/material/styles/createTheme'
 const theme = createTheme({
   palette: {
     primary: {
-      main: '#151515',
+      main: '#151515'
     },
     secondary: {
-      main: '#f4f4f4',
+      main: '#f4f4f4'
     },
     text: {
-      primary: '#151515',
-    },
+      primary: '#151515'
+    }
   },
   components: {
     MuiInputLabel: {
       styleOverrides: {
         root: {
           color: '#151515',
-          fontFamily: 'Roboto',
-        },
-      },
+          fontFamily: 'Roboto'
+        }
+      }
     },
     MuiTextField: {
       styleOverrides: {
         root: {
           '& .MuiInput-underline:after': {
-            borderBottomColor: '#151515',
+            borderBottomColor: '#151515'
           },
           '& .MuiInput-underline:before': {
-            borderBottomColor: '#151515',
-          },
-        },
-      },
+            borderBottomColor: '#151515'
+          }
+        }
+      }
     },
     MuiInputBase: {
       styleOverrides: {
         input: {
           color: '#151515',
-          fontFamily: 'Roboto',
-        },
-      },
+          fontFamily: 'Roboto'
+        }
+      }
     },
     MuiButton: {
       styleOverrides: {
         root: {
-          fontFamily: 'Roboto',
-        },
-      },
+          fontFamily: 'Roboto'
+        }
+      }
     },
     MuiLinearProgress: {
       styleOverrides: {
         root: {
-          backgroundColor: '#111111',
+          backgroundColor: '#111111'
         },
         bar: {
-          backgroundColor: '#555555',
-        },
-      },
-    },
-  },
+          backgroundColor: '#555555'
+        }
+      }
+    }
+  }
 })
 
 export default theme

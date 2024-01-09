@@ -1,6 +1,6 @@
 import {CompanyNameContainer} from './CompanyNameStyled'
 
-const CompanyName = () => {
+const CompanyName = (): JSX.Element => {
   return (
     <CompanyNameContainer>
       Football FX

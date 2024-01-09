@@ -10,7 +10,7 @@ import theme from './theme'
 import store from './app/store'
 import './fonts.css'
 
-function App() {
+function App (): JSX.Element {
   return (
     <Provider store={store}>
       <ThemeProvider theme={theme}>

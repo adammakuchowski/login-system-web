@@ -9,9 +9,13 @@ interface TextButtonProps {
 const TextButton = ({
   text,
   action,
-  overrideStyle,
+  overrideStyle
 }: TextButtonProps): JSX.Element => {
-  const onAction = () => action && action()
+  const onAction = (): void => {
+    if (!action) return
+
+    action()
+  }
 
   return (
     <TextButtonContainer onClick={onAction} style={overrideStyle}>

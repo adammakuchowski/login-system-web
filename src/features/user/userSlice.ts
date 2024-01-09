@@ -2,22 +2,23 @@ import axios, {Canceler} from 'axios'
 
 import {
   createAsyncThunk,
-  createSlice,
+  createSlice
 } from '@reduxjs/toolkit'
 
 import {AppState} from '../../app/store'
 import {
   LoginUserData,
-  UserState,
+  UserState
 } from './types'
 
 export const loginUser = createAsyncThunk('auth/login', async (loginUserData: LoginUserData) => {
   try {
+    // eslint-disable-next-line @typescript-eslint/no-unused-vars
     let cancel: Canceler
     const response = await axios.post(
       'http://localhost:1337/auth/login',
       loginUserData,
-      {cancelToken: new axios.CancelToken(c => cancel = c)}
+      {cancelToken: new axios.CancelToken(c => { cancel = c })}
     )
 
     return response.data
@@ -29,14 +30,15 @@ export const loginUser = createAsyncThunk('auth/login', async (loginUserData: Lo
 
 export const verifyToken = createAsyncThunk('auth/verify', async (token: string) => {
   try {
+    // eslint-disable-next-line @typescript-eslint/no-unused-vars
     let cancel: Canceler
     const response = await axios.get(
       'http://localhost:1337/auth/verify',
       {
         headers: {
-          'Authorization': `Bearer ${token}`,
+          Authorization: `Bearer ${token}`
         },
-        cancelToken: new axios.CancelToken(c => cancel = c),
+        cancelToken: new axios.CancelToken(c => { cancel = c })
       }
     )
 
@@ -49,21 +51,21 @@ export const verifyToken = createAsyncThunk('auth/verify', async (token: string)
 
 const initialState: UserState = {
   loginUserStatus: 'idle',
-  verifyTokenStatus: 'idle',
+  verifyTokenStatus: 'idle'
 }
 
 const userSlice = createSlice({
   name: 'user',
   initialState,
   reducers: {},
-  extraReducers(builder) {
+  extraReducers (builder) {
     builder
       .addCase(loginUser.pending, (state) => {
         state.loginUserStatus = 'loading'
       })
       .addCase(loginUser.fulfilled, (state, action) => {
         state.loginUserStatus = 'succeeded'
-        sessionStorage.setItem('token', action.payload.token)
+        sessionStorage.setItem('token', action.payload.token as string)
       })
       .addCase(loginUser.rejected, (state, action) => {
         state.loginUserStatus = 'failed'
@@ -82,7 +84,7 @@ const userSlice = createSlice({
   }
 })
 
-export const getLoginUserStatus = (state: AppState) => state.user.loginUserStatus
-export const getVerifyTokenStatus = (state: AppState) => state.user.verifyTokenStatus
+export const getLoginUserStatus = (state: AppState): string => state.user.loginUserStatus
+export const getVerifyTokenStatus = (state: AppState): string => state.user.verifyTokenStatus
 
 export default userSlice.reducer

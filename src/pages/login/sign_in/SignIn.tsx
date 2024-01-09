@@ -9,15 +9,15 @@ import {
   ButtonActionWrapper,
   SignInContainer,
   TextButtonWrapper,
-  TextFieldWrapper,
+  TextFieldWrapper
 } from './SignInStyled'
 import {
   getLoginUserStatus,
-  loginUser,
+  loginUser
 } from '../../../features/user/userSlice'
 import TextButton from '../../../components/common/buttons/text_button/TextButton'
 
-const SignIn = () => {
+const SignIn = (): JSX.Element => {
   const dispatch = useDispatch()
   const navigate = useNavigate()
   const loginUserStatus = useSelector(getLoginUserStatus)
@@ -31,10 +31,10 @@ const SignIn = () => {
   const [email, setEmail] = useState<string>('')
   const [password, setPassword] = useState<string>('')
 
-  const handleEmailChange = (event: any) => setEmail(event.target.value)
-  const handlePasswordChange = (event: any) => setPassword(event.target.value)
+  const handleEmailChange = (event: any): void => { setEmail(event.target.value as string) }
+  const handlePasswordChange = (event: any): void => { setPassword(event.target.value as string) }
 
-  const handleLoginUser = () => {
+  const handleLoginUser = (): void => {
     if (loginUserStatus !== 'loading') {
       dispatch<any>(loginUser({email, password}))
     }

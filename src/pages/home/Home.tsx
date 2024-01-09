@@ -4,12 +4,12 @@ import {useNavigate} from 'react-router-dom'
 
 import {
   getVerifyTokenStatus,
-  verifyToken,
+  verifyToken
 } from '../../features/user/userSlice'
 import LoadingLine from '../../components/common/loading_line/LoadingLine'
 import {
   HomeContainer,
-  LoadingLineContainer,
+  LoadingLineContainer
 } from './HomeStyled'
 
 const Home = (): JSX.Element => {

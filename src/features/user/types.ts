@@ -3,7 +3,7 @@ export interface LoginUserData {
   password: string;
 }
 
-type RequestStatuses = 'idle' | 'loading' | 'succeeded' | 'failed';
+type RequestStatuses = 'idle' | 'loading' | 'succeeded' | 'failed'
 
 export interface UserState {
   loginUserStatus: RequestStatuses;
