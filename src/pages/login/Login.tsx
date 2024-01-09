@@ -15,7 +15,7 @@ import {
   BasicInformationContainer,
   InfoAndPolicyWrapper,
   CopyrightWrapper,
-  CopyrightTextWrapper,
+  CopyrightTextWrapper
 } from './LoginStyled'
 import CompanyName from './company_name/CompanyName'
 import LoginForm from './login_form/LoginForm'
@@ -27,10 +27,10 @@ const Login = (): JSX.Element => {
     fontSize: '16px',
     padding: '0px 25px',
     height: '55px',
-    borderRadius: '25px',
+    borderRadius: '25px'
   }
 
-  // TODO: Move element code to components  
+  // TODO: Move element code to components
   return (
     <LoginContainer>
       <LoginFormWrapprt>
@@ -61,7 +61,7 @@ const Login = (): JSX.Element => {
         <FooterLoginBanner>
           <ButtonWrapper>
             <ButtonDescription>
-              Don't have an account?
+              Don`t have an account?
             </ButtonDescription>
             <Button
               variant='contained'

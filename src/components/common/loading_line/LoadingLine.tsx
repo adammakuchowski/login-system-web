@@ -1,7 +1,7 @@
 import Box from '@mui/material/Box/Box'
 import LinearProgress from '@mui/material/LinearProgress/LinearProgress'
 
-const LoadingLine = () => {
+const LoadingLine = (): JSX.Element => {
   return (
     <Box sx={{width: '50%'}}>
       <LinearProgress />
