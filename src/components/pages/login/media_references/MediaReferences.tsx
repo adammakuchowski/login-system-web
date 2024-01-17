@@ -6,7 +6,7 @@ import PinterestIcon from '@mui/icons-material/Pinterest'
 
 import {
   ReferencesContainer,
-  SocialMediaIconWrapper,
+  SocialMediaIconWrapper
 } from './MediaReferencesStyled'
 
 interface SocialMediaIcon {
@@ -14,36 +14,36 @@ interface SocialMediaIcon {
   iconAddress: string;
 }
 
-const MediaReferences = () => {
-  const openPage = (address: string) => window.open(address)
+const MediaReferences = (): JSX.Element => {
+  const openPage = (address: string): Window | null => window.open(address)
 
   const socialMedias: SocialMediaIcon[] = [
     {
       iconComponent: <TwitterIcon sx={{color: '#cdcdcd'}}/>,
-      iconAddress: 'https://twitter.com/',
+      iconAddress: 'https://twitter.com/'
     },
     {
       iconComponent: <InstagramIcon sx={{color: '#cdcdcd'}}/>,
-      iconAddress: 'https://www.instagram.com/',
+      iconAddress: 'https://www.instagram.com/'
     },
     {
       iconComponent: <FacebookIcon sx={{color: '#cdcdcd'}}/>,
-      iconAddress: 'https://facebook.com/',
+      iconAddress: 'https://facebook.com/'
     },
     {
       iconComponent: <YouTubeIcon sx={{color: '#cdcdcd'}}/>,
-      iconAddress: 'https://www.youtube.com/',
+      iconAddress: 'https://www.youtube.com/'
     },
     {
       iconComponent: <PinterestIcon sx={{color: '#cdcdcd'}}/>,
-      iconAddress: 'https://www.pinterest.com',
+      iconAddress: 'https://www.pinterest.com'
     }
   ]
 
   return (
     <ReferencesContainer>
-      {socialMedias.map(icon => (
-        <SocialMediaIconWrapper onClick={() => openPage(icon.iconAddress)}>
+      {socialMedias.map((icon: SocialMediaIcon, index: number) => (
+        <SocialMediaIconWrapper key={index} onClick={() => openPage(icon.iconAddress)}>
           {icon.iconComponent}
         </SocialMediaIconWrapper>
       ))}

@@ -1,11 +1,11 @@
+import LoginForm from '../../../pages/login/login_form/LoginForm'
 import {
   LoginContainer,
   LoginBanner,
   LoginFormWrapprt,
   LogoContainer,
-  LogoImgWrapper,
+  LogoImgWrapper
 } from './LoginStyled'
-import LoginForm from './login_form/LoginForm'
 
 const Login = (): JSX.Element => {
   return (
@@ -17,7 +17,7 @@ const Login = (): JSX.Element => {
         <LogoContainer>
           <LogoImgWrapper src='/images/logo.png' alt="test" />
         </LogoContainer>
-        
+
       </LoginBanner>
     </LoginContainer >
   )

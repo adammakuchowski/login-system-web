@@ -1,10 +1,10 @@
 import {
   HeaderContainer,
   DescriptionWrapper,
-  NameWrapper,
+  NameWrapper
 } from './LoginFormHeaderStyled'
 
-const LoginFormHeader = () => {
+const LoginFormHeader = (): JSX.Element => {
   return (
     <HeaderContainer>
       <NameWrapper>
